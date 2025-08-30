@@ -1,27 +1,39 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+/**
+ * Global CSS - Tüm Uygulamada Geçerli Stiller
+ * 
+ * Bu dosya tüm sayfalarda geçerli olan CSS kurallarını içerir
+ * TailwindCSS direktifleri ve custom CSS değişkenleri burada tanımlanır
+ */
 
+/* TailwindCSS Direktifleri */
+@tailwind base;    /* Tailwind'in temel stilleri (reset, normalize) */
+@tailwind components; /* Tailwind'in component stilleri */
+@tailwind utilities;  /* Tailwind'in utility sınıfları */
+
+/* CSS Custom Properties (Değişkenler) */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #ffffff; /* Açık tema arka plan rengi */
+  --foreground: #171717; /* Açık tema metin rengi */
 }
 
+/* Dark Mode Desteği */
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #0a0a0a; /* Koyu tema arka plan rengi */
+    --foreground: #ededed; /* Koyu tema metin rengi */
   }
 }
 
+/* Body Temel Stilleri */
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  color: var(--foreground); /* Metin rengi */
+  background: var(--background); /* Arka plan rengi */
 }
 
+/* TailwindCSS Utility Layer - Custom Utility Sınıfları */
 @layer utilities {
+  /* Text Balance - Metin dengesi için */
   .text-balance {
-    text-wrap: balance;
+    text-wrap: balance; /* Metni dengeli şekilde sarar */
   }
 }
